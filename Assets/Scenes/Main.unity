@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 189910801}
   - component: {fileID: 189910800}
   - component: {fileID: 189910803}
+  - component: {fileID: 189910804}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Player
@@ -265,6 +266,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &189910804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189910799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f5bbf7f2c02624296af4d5090510e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &225182459
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +787,7 @@ MonoBehaviour:
   nowScore: {fileID: 309196772}
   bestScore: {fileID: 600628563}
   endPanel: {fileID: 1046247683}
+  balloonAnim: {fileID: 189910800}
 --- !u!4 &701927478
 Transform:
   m_ObjectHideFlags: 0

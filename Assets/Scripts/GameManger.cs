@@ -19,6 +19,8 @@ public class GameManger : MonoBehaviour
 
     private string key = "bestScore";
 
+    public Animator balloonAnim;
+
     void Start()
     {
         if (Instance == null)
@@ -46,13 +48,17 @@ public class GameManger : MonoBehaviour
     public void GameOver()
     {
         isPlaying = false;
-        Time.timeScale = 0f;
         nowScore.text = _time.ToString("N1");
         if (!PlayerPrefs.HasKey(key) || _time > PlayerPrefs.GetFloat(key))
         {
             PlayerPrefs.SetFloat(key, _time);
         }
         bestScore.text = PlayerPrefs.GetFloat(key).ToString("N1");
+    }
+
+    public void TimeStop()
+    {
         endPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
