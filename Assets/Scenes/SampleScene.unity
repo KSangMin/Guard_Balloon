@@ -387,6 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 1616612440506210466, guid: 7a96372c122b056499caf8eda1ba2981, type: 3}
+  timeText: {fileID: 1498952024}
 --- !u!4 &701927478
 Transform:
   m_ObjectHideFlags: 0
@@ -482,7 +483,7 @@ GameObject:
   - component: {fileID: 1498952025}
   - component: {fileID: 1498952024}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: TimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
