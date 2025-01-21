@@ -28,5 +28,9 @@ public class Obstacle : MonoBehaviour
             GameManger.Instance.balloonAnim.SetBool("isDead", true); ;
             GameManger.Instance.GameOver();
         }
+        else if (collision.gameObject.CompareTag("Border"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
