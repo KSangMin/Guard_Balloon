@@ -17,6 +17,8 @@ public class GameManger : MonoBehaviour
 
     public GameObject endPanel;
 
+    private string key = "bestScore";
+
     void Start()
     {
         if (Instance == null)
@@ -46,6 +48,11 @@ public class GameManger : MonoBehaviour
         isPlaying = false;
         Time.timeScale = 0f;
         nowScore.text = _time.ToString("N1");
+        if (!PlayerPrefs.HasKey(key) || _time > PlayerPrefs.GetFloat(key))
+        {
+            PlayerPrefs.SetFloat(key, _time);
+        }
+        bestScore.text = PlayerPrefs.GetFloat(key).ToString("N1");
         endPanel.SetActive(true);
     }
 }
