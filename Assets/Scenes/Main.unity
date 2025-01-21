@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 189910803}
   m_Layer: 0
   m_Name: Balloon
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 225182463}
   - component: {fileID: 225182462}
   - component: {fileID: 225182461}
+  - component: {fileID: 225182464}
   m_Layer: 5
   m_Name: RetryButton
   m_TagString: Untagged
@@ -347,7 +348,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 225182462}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 225182464}
+        m_TargetAssemblyTypeName: RetryButton, Assembly-CSharp
+        m_MethodName: Retry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &225182462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +399,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225182459}
   m_CullTransparentMesh: 1
+--- !u!114 &225182464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225182459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7eba002db3648046bc3e1d084b99c3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &309196770
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,6 +771,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacle: {fileID: 1616612440506210466, guid: 7a96372c122b056499caf8eda1ba2981, type: 3}
   timeText: {fileID: 1498952024}
+  nowScore: {fileID: 309196772}
+  bestScore: {fileID: 600628563}
+  endPanel: {fileID: 1046247683}
 --- !u!4 &701927478
 Transform:
   m_ObjectHideFlags: 0
@@ -855,7 +883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1046247684
 RectTransform:
   m_ObjectHideFlags: 0
